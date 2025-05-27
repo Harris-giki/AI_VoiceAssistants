@@ -1,0 +1,8 @@
+sounddevice
+numpy
+whisper
+pyttsx3
+torch
+transformers
+bitsandbytes
+openai-whisper
