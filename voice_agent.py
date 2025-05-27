@@ -12,9 +12,6 @@ def get_audio():
         recognizer.adjust_for_ambient_noise(source)
         audio = recognizer.listen(source) #audio is not text; it’s a raw audio data object — basically, the recorded sound captured from your microphone.
                                             #This object holds the actual sound waves (voice recording) in memory, not text yet.
-
-
-
     try:
         text = recognizer.recognize_sphinx(audio)  # offline recognition
         print("You said:", text)
