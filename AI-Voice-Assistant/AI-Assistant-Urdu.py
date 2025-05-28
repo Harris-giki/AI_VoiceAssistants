@@ -83,13 +83,18 @@ def main_colab():
         speak("خدا حافظ", lang='ur')
         return
 
-    prompt = (
-        "براہ کرم تفصیل سے جواب دیں:\n" +
-        command
-    )
+    # Make the prompt clearer and only expect the answer
+    prompt = f"### Instruction:\n{command}\n\n### Response:"
 
     response = chatbot(prompt, max_length=1000, min_length=80, do_sample=True, temperature=0.6)
     text = response[0]['generated_text']
-    speak(text, lang='ur')
+
+    # Extract only the actual response (after ### Response:)
+    if "### Response:" in text:
+        answer = text.split("### Response:")[1].strip()
+    else:
+        answer = text.strip()  # fallback in case marker is missing
+
+    speak(answer, lang='ur')
 
 main_colab()
