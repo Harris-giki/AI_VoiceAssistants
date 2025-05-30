@@ -1,15 +1,15 @@
-## 🧠 Enabling Cross-talk Detection in Voice Assistant
+## Enabling Cross-talk Detection in Voice Assistant
 
 To allow **interruption while AI is speaking**, you need to:
 
-### ✅ Concurrent Audio Playback & Listening
+### Concurrent Audio Playback & Listening
 
 - Do **not stop transcription** while playing the AI's voice.
 - Use **threading** or **asynchronous handling** to play audio while continuing to listen.
 
 ---
 
-### 🔁 Example Change
+### Example Change
 
 **Instead of this:**
 ```python
@@ -42,7 +42,7 @@ def generate_ai_response(self, transcript):
 ```
 ---
 
-### ✅ Benefits of This Approach
+### Benefits of This Approach
 
 - 🎙️ The **microphone stays open** — transcription continues while AI is speaking.
 - 🗣️ If the **user talks**, the `on_data()` method will **capture it in real time**.
