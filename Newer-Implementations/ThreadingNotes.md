@@ -1,6 +1,3 @@
-Here's your content formatted in **Markdown (.md)**:
-
-````markdown
 ## 🧠 Enabling Cross-talk Detection in Voice Assistant
 
 To allow **interruption while AI is speaking**, you need to:
@@ -15,14 +12,11 @@ To allow **interruption while AI is speaking**, you need to:
 ### 🔁 Example Change
 
 **Instead of this:**
-
 ```python
 self.stop_transcription()
 # speak
 self.start_transcription()
 ```
-````
-
 ---
 
 **Use threading like this:**
@@ -46,7 +40,6 @@ def generate_ai_response(self, transcript):
     # Speak AI response in separate thread
     threading.Thread(target=self.generate_audio, args=(ai_response,)).start()
 ```
-
 ---
 
 ### ✅ Benefits of This Approach
@@ -60,8 +53,3 @@ def generate_ai_response(self, transcript):
 ---
 
 > 🔧 This approach makes your assistant more responsive and human-like by supporting real-time user interruption.
-
-```
-
-Let me know if you’d like a downloadable `.md` file or want to add diagrams or flowcharts to this.
-```
