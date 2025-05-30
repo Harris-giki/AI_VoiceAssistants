@@ -24,7 +24,7 @@ class AI_Assistant:
             on_error = self.on_error,
             on_open = self.on_open,
             on_close = self.on_close,
-            end_utterance_silence_threshold = 1000
+            end_utterance_silence_threshold = 1000 #If the user pauses for 1 second, it is treated as the end of a sentence/utterance, triggering on_data() with a final transcript (RealtimeFinalTranscript).
         )
 
         self.transcriber.connect()
