@@ -70,7 +70,3 @@ A simpler, offline-capable voice assistant implementation that uses:
 1. Clone the repository
 2. Install dependencies from requirements.txt
 3. Run `code.py`
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
